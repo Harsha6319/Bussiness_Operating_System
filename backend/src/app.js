@@ -11,10 +11,17 @@ import routes from './routes/index.js';
 
 export const app = express();
 
-
-
 app.use(cors({
-  origin: '*'
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps, Postman, or curl)
+    if (!origin) return callback(null, true);
+    
+    // This dynamically allows ANY origin while keeping credentials enabled
+    callback(null, true);
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 
