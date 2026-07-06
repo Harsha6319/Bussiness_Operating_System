@@ -14,8 +14,7 @@ export const app = express();
 
 
 app.use(cors({
-  origin: 'https://bussiness-operating-system-git-main-harsha6319.vercel.app',
-  credentials: true // Include this if your app uses cookies or sessions
+  origin: '*'
 }));
 
 
