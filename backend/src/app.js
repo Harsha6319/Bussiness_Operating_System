@@ -11,8 +11,15 @@ import routes from './routes/index.js';
 
 export const app = express();
 
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://bussiness-operating-system-git-main-harsha6319.vercel.app',
+  credentials: true // Include this if your app uses cookies or sessions
+}));
+
+
 app.use(helmet());
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173', credentials: true }));
 app.use(express.json({ limit: '2mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
