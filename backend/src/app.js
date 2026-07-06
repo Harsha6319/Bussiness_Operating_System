@@ -11,7 +11,7 @@ import routes from './routes/index.js';
 
 export const app = express();
 
-const cors = require('cors');
+
 
 app.use(cors({
   origin: 'https://bussiness-operating-system-git-main-harsha6319.vercel.app',
