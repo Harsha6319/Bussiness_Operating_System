@@ -1,0 +1,1 @@
+import{j as s}from"./index-DxTN6Tix.js";function l({lines:a=4}){return s.jsx("div",{className:"panel space-y-3 p-5",children:Array.from({length:a}).map((t,e)=>s.jsx("div",{className:"h-4 animate-pulse rounded bg-slate-100",style:{width:`${100-e*12}%`}},e))})}export{l as S};
